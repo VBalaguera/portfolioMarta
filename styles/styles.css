@@ -758,3 +758,54 @@ input[type=submit]:hover{
         font-size: 0.55rem;  
     }
 }
+
+@media (max-width: 715px) and (min-width: 500px) {
+    .section-name {
+        font-size: 3rem; 
+    }
+}
+
+@media (max-width: 499px) and (min-width: 300px) {
+    .section-name {
+        font-size: 2.5rem; 
+    }
+}
+
+@media (max-width: 639px) and (min-width: 485px) {
+
+    .contact-form-container-content {
+        width: 15rem; 
+    }
+
+
+}
+
+@media (max-width: 484px) and (min-width: 388px) {
+
+    .contact-form-container-content {
+        width: 12rem; 
+    }
+
+    input[type="text"], input[type="email"], textarea, input[type=submit] {
+        font-size: .8rem; 
+    }
+
+
+}
+
+
+@media (max-width: 387px) and (min-width: 250px) {
+
+    .contact-form-container-content {
+        width: 10rem; 
+    }
+
+    input[type="text"], input[type="email"], textarea, input[type=submit] {
+        font-size: .6rem; 
+    }
+
+
+}
+
+
+
