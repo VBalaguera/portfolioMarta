@@ -349,6 +349,7 @@ html.transition *:after {
     height: 80%;
     width: 100%;
     display: flex; 
+
     padding: 0.9rem; 
     align-items: center; 
     justify-content: center;
@@ -359,7 +360,7 @@ html.transition *:after {
     align-items: center; 
     justify-content: center;
 }
-.right-down-img img{
+.right img{
     max-width: 100%; 
 }
 
@@ -373,15 +374,16 @@ html.transition *:after {
     height: 20vh;
     width: 70%; 
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: center; 
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--text-color); 
 }
-.vectoriales-up-title {
-    width: 60%;
-}
-.vectoriales-up-right {
-    width: 40%; 
+
+.section-name-description {
+    margin: 1rem 0; 
+    font-size: 1rem; 
 }
 .vectoriales-down {
     height: 80vh;
@@ -496,7 +498,7 @@ html.transition *:after {
     max-width: 60%; 
 }
 
-.section-name {
+.section-name, .section-name-tight {
     font-size: 5rem; 
 }
 
@@ -587,7 +589,7 @@ input[type=submit]:hover{
 
 
 @media (min-width: 1109px) and (max-width: 1402px) {
-    .vectoriales-showdown {
+    .vectoriales-showdown, .flyers-carteles-dos {
         height: 80vh; 
     }
     .flyers-carteles-up {
@@ -609,7 +611,7 @@ input[type=submit]:hover{
 
 
 @media (min-width: 905px) and (max-width: 1108px) {
-    .vectoriales-showdown {
+    .vectoriales-showdown, .flyers-carteles-dos {
         height: 60vh; 
     }
     .flyers-carteles-up {
@@ -629,7 +631,7 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 761px) and (max-width: 904px) {
-    .vectoriales-showdown {
+    .vectoriales-showdown, .flyers-carteles-dos {
         height: 40vh; 
     }
     .flyers-carteles-up {
@@ -649,7 +651,7 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 426px) and (max-width: 760px) {
-    .vectoriales-showdown {
+    .vectoriales-showdown, .flyers-carteles-dos {
         height: 30vh; 
     }
     .flyers-carteles-up {
@@ -663,13 +665,16 @@ input[type=submit]:hover{
     .flyers-carteles-down {
         height: 20%; 
     }
+    .flyers-carteles-down-text {
+        padding: 5rem; 
+    }
     .flyers-carteles-down-text h1 {
         font-size: 2rem;
     }
 }
 
 @media (min-width: 300px) and (max-width: 425px) {
-    .vectoriales-showdown {
+    .vectoriales-showdown, .flyers-carteles-dos {
         height: 20vh; 
     }
     .flyers-carteles-up {
@@ -682,6 +687,9 @@ input[type=submit]:hover{
     }
     .flyers-carteles-down {
         height: 20%; 
+    }
+    .flyers-carteles-down-text {
+        padding: 3rem; 
     }
     .flyers-carteles-down-text h1 {
         font-size: 2rem;
@@ -770,15 +778,29 @@ input[type=submit]:hover{
     }
 }
 
-@media (max-width: 715px) and (min-width: 500px) {
+@media (max-width: 974px) and (min-width: 579px) {
+    .section-name-tight {
+        font-size: 3rem; 
+    }
     .section-name {
         font-size: 3rem; 
     }
+    .section-name-description {
+        margin: 1rem 0; 
+        font-size: .8rem; 
+    }
 }
 
-@media (max-width: 499px) and (min-width: 300px) {
+@media (max-width: 578px) and (min-width: 300px) {
+    .section-name-tight {
+        font-size: 2rem; 
+    }
     .section-name {
         font-size: 1.5rem; 
+    }
+    .section-name-description {
+        margin: 1rem 0; 
+        font-size: .8rem; 
     }
 }
 
