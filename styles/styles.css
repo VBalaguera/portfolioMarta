@@ -263,12 +263,14 @@ html.transition *:after {
     height: 100vh; 
     width: 100%; 
     background-image: url('../images/ilustraciones/915223oYCeoo4F.jpg');
+    background-position: center top; 
     position: absolute; 
     z-index: -1; 
 }
 .portada-color {
     height: 100vh; 
     width: 100%; 
+    
     background-color: rgb(1, 1, 1, 0.6); /*variation 2: black*/
 }
 .menu {
@@ -585,6 +587,9 @@ input[type=submit]:hover{
 
 
 @media (min-width: 1109px) and (max-width: 1402px) {
+    .vectoriales-showdown {
+        height: 80vh; 
+    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -604,6 +609,9 @@ input[type=submit]:hover{
 
 
 @media (min-width: 905px) and (max-width: 1108px) {
+    .vectoriales-showdown {
+        height: 60vh; 
+    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -621,6 +629,9 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 761px) and (max-width: 904px) {
+    .vectoriales-showdown {
+        height: 40vh; 
+    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -638,6 +649,9 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 426px) and (max-width: 760px) {
+    .vectoriales-showdown {
+        height: 30vh; 
+    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -655,6 +669,9 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 300px) and (max-width: 425px) {
+    .vectoriales-showdown {
+        height: 20vh; 
+    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -686,18 +703,12 @@ input[type=submit]:hover{
         bottom: -3rem; 
  
     }
-
     .downwards-menu.active {
         bottom: 0rem 
     }
-
-
-
-
     .downwards-menu-links li {
         padding: 0.5rem; 
     }
-
     .downwards-menu-links a {
         font-size: 0.85rem;  
     }
@@ -767,7 +778,7 @@ input[type=submit]:hover{
 
 @media (max-width: 499px) and (min-width: 300px) {
     .section-name {
-        font-size: 2.5rem; 
+        font-size: 1.5rem; 
     }
 }
 
@@ -803,7 +814,6 @@ input[type=submit]:hover{
     input[type="text"], input[type="email"], textarea, input[type=submit] {
         font-size: .6rem; 
     }
-
 
 }
 
