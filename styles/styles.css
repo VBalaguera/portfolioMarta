@@ -215,7 +215,7 @@ html.transition *:after {
 
 /*TRYING LAYOUTS FROM INTEREST*/
 /*PORTADA*/
-.portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown, .flyers-carteles, .flyers-carteles-dos, .contacto {
+.portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .contacto {
     height: 100vh; 
     width: 100%; 
     box-sizing: border-box;
@@ -234,6 +234,7 @@ html.transition *:after {
     width: 50%;
     height: 100%;
     display: flex; 
+    flex-direction: column;
     padding: 0.9rem; 
     background-color: var(--text-color); 
     color: var(--main-color); 
@@ -247,6 +248,7 @@ html.transition *:after {
     width: 50%;
     height: 100%;
     display: flex; 
+    flex-direction: column;
     padding: 0.9rem; 
     background-color: var(--text-color); 
     color: var(--main-color); 
@@ -257,6 +259,21 @@ html.transition *:after {
     background-size: cover; 
     background-repeat: no-repeat; 
     overflow: hidden; 
+}
+.button-ilustraciones {
+    height: 2rem; 
+    width: 8rem;
+    background-color: white; 
+    box-shadow: none;
+    border: none; 
+    cursor: pointer;
+    position: absolute; 
+    bottom: 5%; 
+}
+.button-ilustraciones a {
+    color: black; 
+    margin: auto; 
+    font-weight: 600; 
 }
 
 .portada-bg {
@@ -270,6 +287,7 @@ html.transition *:after {
 .portada-color {
     height: 100vh; 
     width: 100%; 
+
     
     background-color: rgb(1, 1, 1, 0.6); /*variation 2: black*/
 }
@@ -281,8 +299,14 @@ html.transition *:after {
     align-content: center; 
     justify-content: space-around;
 }
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .marta {
-    font-size: 5rem; 
+    font-size: 6.5rem; 
     font-weight: 700; 
     letter-spacing: 0.2rem; 
     color: var(--text-color); 
@@ -290,7 +314,7 @@ html.transition *:after {
     -webkit-text-stroke-color: var(--main-color);
 }
 .artist {
-    font-size: 3.6rem;
+    font-size: 3rem;
     color: var(--text-color); 
     -webkit-text-stroke-width: .4px;
     -webkit-text-stroke-color: var(--main-color);
@@ -384,6 +408,8 @@ html.transition *:after {
 .section-name-description {
     margin: 1rem 0; 
     font-size: 1rem; 
+    text-align: center;
+    line-height: 1.2rem;
 }
 .vectoriales-down {
     height: 80vh;
@@ -404,6 +430,7 @@ html.transition *:after {
     width: 50%;
     height: 100%;
     display: flex; 
+    flex-direction: column;
     padding: 0.9rem; 
     align-items: center; 
     justify-content: center; 
@@ -420,6 +447,7 @@ html.transition *:after {
     width: 50%;
     height: 100%;
     display: flex; 
+    flex-direction: column;
     padding: 0.9rem; 
     align-items: center; 
     justify-content: center;
@@ -428,6 +456,21 @@ html.transition *:after {
     background-color: white; 
 }
 
+.button-vectoriales {
+    height: 2rem; 
+    width: 8rem;
+    background-color: black; 
+    box-shadow: none;
+    border: none; 
+    cursor: pointer;
+    position: absolute; 
+    bottom: 5%; 
+}
+.button-vectoriales a {
+    color: white; 
+    margin: auto; 
+    font-weight: 600; 
+}
 
 .flyers-carteles {
     display: flex;
@@ -435,20 +478,22 @@ html.transition *:after {
 }
 
 .flyers-carteles-up {
-    width: 100%;
-    height: 60%;
-    background-color: var(--text-color); 
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: center;
+}
+
+.flyers-carteles-up div {
+    width: 30rem; 
     display: flex; 
     align-items: center;
     justify-content: center;
 }
 
 .flyers-carteles-up img {
-    margin: 0 1rem; 
-    max-height: 80%;
-    object-fit: contain;
-    border: 1px solid var(--main-color); 
-    background-color: white; 
+    margin: 1rem 1rem; 
+    max-width: 90%; 
 }
 
 .flyers-carteles-down {
@@ -482,7 +527,7 @@ html.transition *:after {
     height: 100%;
     display: flex; 
     padding: .9rem; 
-    background-color: var(--text-color); 
+    background-color: var(--main-color); 
     border-top: 1px solid var(--main-color);
     color: var(--main-color); 
     align-items: center; 
@@ -491,11 +536,27 @@ html.transition *:after {
 }
 
 .flyer-img-uno {
-    max-width: 90%; 
+    max-width: 50%; 
     background-color: white; 
 }
 .flyer-img-dos{
     max-width: 60%; 
+}
+
+.button-carteles {
+    height: 2rem; 
+    width: 8rem;
+    background-color: white; 
+    box-shadow: none;
+    border: none; 
+    cursor: pointer;
+    position: absolute; 
+    bottom: 5%; 
+}
+.button-carteles a {
+    color: black; 
+    margin: auto; 
+    font-weight: 600; 
 }
 
 .section-name, .section-name-tight {
@@ -504,6 +565,22 @@ html.transition *:after {
 
 .ilustraciones-preview {
     background-color: var(--main-color); 
+}
+.ilustraciones-showdown-gallery {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: center;
+}
+.ilustraciones-showdown-gallery div {
+    width: 30rem; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.ilustraciones-showdown-gallery img {
+    margin: 1rem 1rem; 
+    max-width: 90%; 
 }
 
 .contacto-left {
@@ -589,7 +666,7 @@ input[type=submit]:hover{
 
 
 @media (min-width: 1109px) and (max-width: 1402px) {
-    .vectoriales-showdown, .flyers-carteles-dos {
+    .vectoriales-showdown{
         height: 80vh; 
     }
     .flyers-carteles-up {
@@ -611,9 +688,6 @@ input[type=submit]:hover{
 
 
 @media (min-width: 905px) and (max-width: 1108px) {
-    .vectoriales-showdown, .flyers-carteles-dos {
-        height: 60vh; 
-    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -631,9 +705,6 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 761px) and (max-width: 904px) {
-    .vectoriales-showdown, .flyers-carteles-dos {
-        height: 40vh; 
-    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -651,9 +722,6 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 426px) and (max-width: 760px) {
-    .vectoriales-showdown, .flyers-carteles-dos {
-        height: 30vh; 
-    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -674,9 +742,6 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 300px) and (max-width: 425px) {
-    .vectoriales-showdown, .flyers-carteles-dos {
-        height: 20vh; 
-    }
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;

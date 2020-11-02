@@ -13,3 +13,7 @@
 <section class="flyers-carteles" id="flyers-carteles">
 
 <section class="contacto" id="contacto">
+
+PENDING: 
+//PORTRAIT MODE ON WIDESCREEN DEVICES
+//CONTACT FORM WITH FIREBASE INTEGRATION 
