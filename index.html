@@ -93,16 +93,21 @@
             </div>
             <div class='contacto-right'>
                 <div class="contact-form-container">
-                    <form action="action_page.php" class="contact-form-container-content">
+                    <div class="alert">Mensaje recibido!</div>
+                    <form class="contact-form-container-content"
+                    id="contactForm">
 
 
-                        <input type="text" id="fname" name="firstname" placeholder="Nombre" required>
+                        <input type="text" id="name" name="firstname" placeholder="Nombre"
+                        required>
                     
 
-                        <input type="email" id="mail" name="mail" placeholder="Correo electrónico" required>
+                        <input type="email" id="mail" name="mail" placeholder="Correo electrónico"
+                        required>
                     
 
-                        <textarea id="subject" name="subject" placeholder="Mensaje" style="height:200px" required></textarea>
+                        <textarea id="message" name="subject" placeholder="Mensaje" style="height:200px"
+                        required></textarea>
                     
                         <input type="submit" value="Enviar" placeholder="Enviar">
                     
@@ -153,8 +158,10 @@
         </div>
     </div>
    
-    <script type="text/javascript" src="./scripts/index.js">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
 
-    </script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+
+    <script type="text/javascript" src="./scripts/form.js"> </script>
 </body>
 </html>

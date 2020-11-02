@@ -323,7 +323,11 @@ html.transition *:after {
     font-size: 1.5rem; 
     margin: 0.3rem 0; 
 }
-
+.alert {
+    text-align: center;
+    padding: 1rem; 
+    display: none; 
+}
 
 
 .ilustraciones{
