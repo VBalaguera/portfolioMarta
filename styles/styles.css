@@ -329,6 +329,7 @@ html.transition *:after {
     display: flex; 
     align-items: center; 
     justify-content: center;
+    z-index: 3; 
 }
 .button-return {
     height: 2rem; 
@@ -640,7 +641,6 @@ html.transition *:after {
     justify-content: center;
     position: relative; 
     overflow:hidden; 
-
 }
 .motion-graphics-right-video {
     position: absolute; 
@@ -655,10 +655,13 @@ html.transition *:after {
     justify-content: flex-end;
     overflow: hidden; 
 }
+.motion-graphics-detail {
+    background-color: black; 
+}
 .motion-graphics-right-video-detail {
     height: 100%;
     width: 100%; 
-    z-index: -1; 
+    z-index: 2; 
     position: absolute;
 }
 .motion-graphics-right-video-texto {
@@ -666,6 +669,8 @@ html.transition *:after {
     display: flex; 
     flex-direction: column;
     align-items: center; 
+    z-index: 3; 
+    color: white; 
 }
 
 .contacto-left {
