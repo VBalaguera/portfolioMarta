@@ -1,3 +1,7 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -101,27 +105,7 @@ custom scrollbar (for EVERYTHING but Firefox and Internet Explorer)
 }
 
 
-.downwards-menu {  
-    width: 100%; 
-    height: 50px; 
-    background-color: var(--text-color);
-    position: fixed; 
-    bottom: -50px; 
-    transition: all 200ms linear; 
-}
 
-.downwards-menu.active {
-    bottom: 0px; 
-}
-.downwards-menu-toggle-btn {
-    position: absolute; 
-    left: calc(50% - .9rem);  /*PENDING*/
-    top: -50px; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    
-}
 .logo{
     height: 2rem; 
     width: 2rem 
@@ -215,7 +199,7 @@ html.transition *:after {
 
 /*TRYING LAYOUTS FROM INTEREST*/
 /*PORTADA*/
-.portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .contacto {
+.portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown, .vectoriales-showdown-detail, .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics, .contacto {
     height: 100vh; 
     width: 100%; 
     box-sizing: border-box;
@@ -260,6 +244,18 @@ html.transition *:after {
     background-repeat: no-repeat; 
     overflow: hidden; 
 }
+.preview-right-detail {
+    width: 50%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    padding: 0.9rem; 
+    background-color: var(--text-color); 
+    color: var(--main-color); 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden; 
+}
 .button-ilustraciones {
     height: 2rem; 
     width: 8rem;
@@ -274,6 +270,7 @@ html.transition *:after {
     color: black; 
     margin: auto; 
     font-weight: 600; 
+    font-family: 'Raleway', sans-serif;
 }
 
 .portada-bg {
@@ -328,7 +325,26 @@ html.transition *:after {
     padding: 1rem; 
     display: none; 
 }
-
+.button-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.button-return {
+    height: 2rem; 
+    width: 8rem;
+    background-color: black; 
+    box-shadow: none;
+    border: none; 
+    cursor: pointer;
+    margin: 1rem; 
+}
+.button-return a {
+    color: white; 
+    margin: auto; 
+    font-weight: 600; 
+    font-family: 'Raleway', sans-serif;
+}
 
 .ilustraciones{
     background-position: center;
@@ -414,6 +430,7 @@ html.transition *:after {
     font-size: 1rem; 
     text-align: center;
     line-height: 1.2rem;
+    font-family: 'Raleway', sans-serif;
 }
 .vectoriales-down {
     height: 80vh;
@@ -429,6 +446,16 @@ html.transition *:after {
     align-items: center;
     justify-content: center;
     overflow: hidden; 
+}
+.vectoriales-showdown-container {
+    display: flex; 
+    flex-direction: column;
+}
+.vectoriales-showdown-container-up {
+    display: flex; 
+}
+.vectoriales-showdown-up {
+    display: flex;
 }
 .vectoriales-showdown-left {
     width: 50%;
@@ -474,6 +501,7 @@ html.transition *:after {
     color: white; 
     margin: auto; 
     font-weight: 600; 
+    font-family: 'Raleway', sans-serif;
 }
 
 .flyers-carteles {
@@ -493,10 +521,10 @@ html.transition *:after {
     display: flex; 
     align-items: center;
     justify-content: center;
+    margin: 1rem 1rem; 
 }
 
 .flyers-carteles-up img {
-    margin: 1rem 1rem; 
     max-width: 90%; 
 }
 
@@ -545,6 +573,7 @@ html.transition *:after {
 }
 .flyer-img-dos{
     max-width: 60%; 
+    border: 1px solid black; 
 }
 
 .button-carteles {
@@ -561,10 +590,13 @@ html.transition *:after {
     color: black; 
     margin: auto; 
     font-weight: 600; 
+    font-family: 'Raleway', sans-serif;
 }
 
-.section-name, .section-name-tight {
+.section-name-tight {
     font-size: 5rem; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .ilustraciones-preview {
@@ -587,7 +619,7 @@ html.transition *:after {
     max-width: 90%; 
 }
 
-.contacto-left {
+.motion-graphics-left {
     width: 50%;
     height: 100%;
     display: flex; 
@@ -598,12 +630,61 @@ html.transition *:after {
     justify-content: center;
 }
 
-.contacto-right {
+.motion-graphics-right {
     width: 50%;
     display: flex; 
     flex-direction: column;
     background-color: var(--text-color); 
     color: var(--main-color); 
+    align-items: center; 
+    justify-content: center;
+    position: relative; 
+    overflow:hidden; 
+
+}
+.motion-graphics-right-video {
+    position: absolute; 
+    height: 100%;
+}
+.motion-graphics-container {
+    height: 100vh; 
+    width: 100vw; 
+    display: flex; 
+    position: relative; 
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden; 
+}
+.motion-graphics-right-video-detail {
+    height: 100%;
+    width: 100%; 
+    z-index: -1; 
+    position: absolute;
+}
+.motion-graphics-right-video-texto {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.contacto-left {
+    width: 50%;
+    height: 100%;
+    display: flex; 
+    background-color: var(--text-color); 
+    color: var(--main-color); 
+    border-top: 1px solid var(--main-color); 
+    align-items: center; 
+    justify-content: center;
+}
+
+.contacto-right {
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+    background-color: var(--main-color); 
+    color: var(--text-color); 
     align-items: center; 
     justify-content: center;
 
@@ -775,84 +856,9 @@ input[type=submit]:hover{
     }
 }
 
-@media (min-width: 1001px) and (max-width: 1300px) {
-    .downwards-menu {
-        height: 3rem; 
-        bottom: -3rem; 
- 
-    }
-    .downwards-menu.active {
-        bottom: 0rem 
-    }
-    .downwards-menu-links li {
-        padding: 0.5rem; 
-    }
-    .downwards-menu-links a {
-        font-size: 0.85rem;  
-    }
-}
-
-
-@media (max-width: 1000px) and (min-width:751px) {
-    .downwards-menu {
-        height: 3rem; 
-        bottom: -3rem; 
-
-    }
-    .downwards-menu.active {
-        bottom: 0rem 
-    }
-    .downwards-menu-links li {
-        padding: 0.5rem; 
-    }
-    .downwards-menu-links a {
-        font-size: 0.85rem;  
-    }
-}
-
-/*smartphones specs below*/
-
-@media only screen and (max-width: 750px) {
-
-    .downwards-menu {
-        height: 3rem; 
-        bottom: -3rem; 
-    }
-
-    .downwards-menu.active {
-        bottom: 0rem 
-    }
-    .downwards-menu-links li {
-        padding: 0.5rem; 
-    }
-    .downwards-menu-links a {
-        font-size: 0.85rem;  
-    }
-}
-
-@media (max-width: 749px) and (min-width: 300px) {
-
-    .downwards-menu {
-        height: 3rem; 
-        bottom: -3rem; 
-    }
-
-    .downwards-menu.active {
-        bottom: 0rem 
-    }
-    .downwards-menu-links li {
-        padding: 0.5rem; 
-    }
-    .downwards-menu-links a {
-        font-size: 0.55rem;  
-    }
-}
 
 @media (max-width: 974px) and (min-width: 579px) {
     .section-name-tight {
-        font-size: 3rem; 
-    }
-    .section-name {
         font-size: 3rem; 
     }
     .section-name-description {
@@ -863,9 +869,6 @@ input[type=submit]:hover{
 
 @media (max-width: 578px) and (min-width: 300px) {
     .section-name-tight {
-        font-size: 2rem; 
-    }
-    .section-name {
         font-size: 1.5rem; 
     }
     .section-name-description {
