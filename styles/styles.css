@@ -902,7 +902,9 @@ input[type=submit]:hover{
     input[type="text"], input[type="email"], textarea, input[type=submit] {
         font-size: .8rem; 
     }
-
+    .marta {
+        font-size: 5.7rem; 
+    }
 
 }
 
