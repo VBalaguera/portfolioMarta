@@ -301,11 +301,12 @@ html.transition *:after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .marta {
     font-size: 6.5rem; 
-    font-weight: 700; 
-    letter-spacing: 0.2rem; 
+    font-weight: 800; 
+    letter-spacing: 1rem; 
     color: var(--text-color); 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--main-color);
@@ -315,6 +316,7 @@ html.transition *:after {
     color: var(--text-color); 
     -webkit-text-stroke-width: .4px;
     -webkit-text-stroke-color: var(--main-color);
+
 }
 .menu-sections li {
     font-size: 1.5rem; 
