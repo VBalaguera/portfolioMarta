@@ -859,7 +859,20 @@ input[type=submit]:hover{
     font-family: 'Raleway', sans-serif;
   }
 
+.credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 
+    color: red; 
+    bottom: 10%; 
+    left: 65%; 
+}
+
+.credits p {
+    margin: .3rem; 
+}
 
 /*MEDIA QUERIES*/
 
@@ -895,8 +908,12 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 300px) and (max-width: 599px) {
-    .portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
+    .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
         height: 25vh; 
+    }
+
+    .marta {
+        font-size: 5rem; 
     }
 
     .contacto {
@@ -931,7 +948,7 @@ input[type=submit]:hover{
 
 
     .vectoriales-showdown-detail {
-        height: 75vh; 
+        height: 70vh; 
     }
 
     .vectoriales-showdown-container-up {
