@@ -953,7 +953,7 @@ input[type=submit]:hover{
 
 
     .vectoriales-showdown-detail {
-        height: 70vh; 
+        height: 90vh; 
     }
 
     .vectoriales-showdown-container-up {
@@ -962,7 +962,7 @@ input[type=submit]:hover{
         justify-content: center;
     }
     .vectoriales-showdown-left, .vectoriales-showdown-right {
-        width: 80%; 
+        width: 100%; 
     }
 
 }
