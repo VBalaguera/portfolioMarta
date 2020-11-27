@@ -914,7 +914,8 @@ input[type=submit]:hover{
         height: 25vh; 
     }
     .vectoriales {
-        height: 20vh;
+        height: 25vh;
+        margin-bottom: 2rem;
     }
 
     .marta {
@@ -953,7 +954,7 @@ input[type=submit]:hover{
 
 
     .vectoriales-showdown-detail {
-        height: 90vh; 
+        height: 70vh; 
     }
 
     .vectoriales-showdown-container-up {
@@ -962,7 +963,7 @@ input[type=submit]:hover{
         justify-content: center;
     }
     .vectoriales-showdown-left, .vectoriales-showdown-right {
-        width: 100%; 
+        width: 80%; 
     }
 
 }
