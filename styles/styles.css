@@ -255,6 +255,11 @@ html.transition *:after {
     justify-content: center;
     overflow: hidden; 
 }
+.preview-right-detail img {
+    margin: 1rem; 
+    max-width: 90%; 
+}
+
 .button-ilustraciones {
     height: 2rem; 
     width: 8rem;
@@ -573,6 +578,7 @@ html.transition *:after {
 .flyer-img-uno {
     max-width: 50%; 
     background-color: white; 
+    margin: auto; 
 }
 .flyer-img-dos{
     max-width: 60%; 
@@ -900,16 +906,41 @@ input[type=submit]:hover{
     .flyers-carteles-down-text h1 {
         font-size: 4rem;
     }
+
+
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    .portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
-        height: 50vh; 
+    .ilustraciones-preview, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .motion-graphics {
+        height: 60vh; 
     }
+
+    .section-name-tight {
+        font-size: 3rem; 
+    }
+    .section-name-description {
+        margin: 1rem 0; 
+        font-size: .8rem; 
+    }
+
+
+
+
 }
 
-@media (min-width: 300px) and (max-width: 599px) {
-    .ilustraciones-preview, .ilustraciones, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
+@media (max-width: 1200px) and (min-width: 760px) {
+    .ilustraciones, .flyers-carteles-dos {
+        height: 75vh; 
+    }
+    .preview-right-detail img {
+        max-width: 100%; 
+    }
+
+
+}
+
+@media (min-width: 200px) and (max-width: 599px) {
+    .ilustraciones-preview, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
         height: 25vh; 
     }
     .vectoriales {
@@ -937,21 +968,25 @@ input[type=submit]:hover{
         margin: auto; 
     }
 
+
     .ilustraciones {
-        height: 55vh; 
+        height: 80vh; 
         flex-direction: column;
+        padding: 1rem; 
     }
 
     .preview-left-detail, .preview-right-detail {
-        width: 80%; 
+        width: 100%; 
     }
     .preview-left-detail {
         height: 10vh; 
     }
-    .preview-right-detail img {
-        width: 100%; 
+    .preview-right-detail {
+        height: 80vh; 
     }
-
+    .preview-right-detail img {
+        width: 90%; 
+    }
 
     .vectoriales-showdown-detail {
         height: 85vh;
@@ -979,7 +1014,13 @@ input[type=submit]:hover{
         margin: 0 auto; 
     }
 
-
+    .section-name-tight {
+        font-size: 1.5rem; 
+    }
+    .section-name-description {
+        margin: 1rem 0; 
+        font-size: .8rem; 
+    }
 
 
 }
@@ -989,20 +1030,7 @@ revamp: both designs need to be one under the other in responsive*/
 @media (min-width: 905px) and (max-width: 1108px) {
 
 
-    .flyers-carteles-up {
-        height: 80%; 
-        flex-wrap: wrap;
-    }
-    .flyers-carteles-up img {
-        margin: 0 .2rem; 
-        max-height: 65%;
-    }
-    .flyers-carteles-down {
-        height: 20%; 
-    }
-    .flyers-carteles-down-text h1 {
-        font-size: 4rem;
-    }
+
 }
 
 @media (min-width: 761px) and (max-width: 904px) {
@@ -1076,23 +1104,11 @@ revamp: both designs need to be one under the other in responsive*/
 
 
 @media (max-width: 974px) and (min-width: 579px) {
-    .section-name-tight {
-        font-size: 3rem; 
-    }
-    .section-name-description {
-        margin: 1rem 0; 
-        font-size: .8rem; 
-    }
+
 }
 
 @media (max-width: 578px) and (min-width: 300px) {
-    .section-name-tight {
-        font-size: 1.5rem; 
-    }
-    .section-name-description {
-        margin: 1rem 0; 
-        font-size: .8rem; 
-    }
+
 }
 
 
