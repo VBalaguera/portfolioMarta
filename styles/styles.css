@@ -450,7 +450,6 @@ html.transition *:after {
     display: flex; 
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
 }
 .vectoriales-showdown-container {
     display: flex; 
@@ -470,7 +469,6 @@ html.transition *:after {
     padding: 0.9rem; 
     align-items: center; 
     justify-content: center; 
-    overflow: hidden; 
     background-color: var(--main-color); 
 }
 .vectoriales-showdown img, .vectoriales-showdown-detail img {
@@ -954,7 +952,8 @@ input[type=submit]:hover{
 
 
     .vectoriales-showdown-detail {
-        height: 70vh; 
+        height: 95vh;
+        padding-bottom: 3rem;  
     }
 
     .vectoriales-showdown-container-up {
@@ -963,7 +962,12 @@ input[type=submit]:hover{
         justify-content: center;
     }
     .vectoriales-showdown-left, .vectoriales-showdown-right {
-        width: 80%; 
+        width: 100%; 
+    }
+    .vectoriales-showdown img, .vectoriales-showdown-detail img {
+        max-width: 90%;
+        max-height: 90%; 
+        margin: auto; 
     }
 
 }
