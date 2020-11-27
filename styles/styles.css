@@ -414,7 +414,8 @@ html.transition *:after {
     color: var(--text-color); 
     flex-direction: column; 
     align-items: center; 
-    background: crimson; 
+    background: white; 
+    padding: 1rem; 
 }
 .vectoriales-up {
     height: 50%;
@@ -425,6 +426,7 @@ html.transition *:after {
     align-items: center; 
     justify-content: center;
     color: var(--text-color); 
+    margin-bottom: 1rem; 
 }
 
 .section-name-description {
@@ -908,8 +910,11 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 300px) and (max-width: 599px) {
-    .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
+    .ilustraciones-preview, .ilustraciones, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
         height: 25vh; 
+    }
+    .vectoriales {
+        height: 20vh;
     }
 
     .marta {
