@@ -968,6 +968,17 @@ input[type=submit]:hover{
         max-width: 80%;
         max-height: 80%; 
     }
+    
+
+    .motion-graphics-right-video-texto {
+        width: 90%; 
+        margin: 0 auto; 
+    }
+
+    .button-container {
+        margin-bottom: 2rem; 
+    }
+
 
 }
 /*.vectoriales-showdown, .vectoriales-showdown-detail,
