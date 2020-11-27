@@ -214,7 +214,7 @@ html.transition *:after {
     background-color: var(--main-color); 
 }
 
-.preview-left {
+.preview-left, .preview-left-detail {
     width: 50%;
     height: 100%;
     display: flex; 
@@ -222,7 +222,6 @@ html.transition *:after {
     padding: 0.9rem; 
     background-color: var(--text-color); 
     color: var(--main-color); 
-    border-right: 1px solid var(--main-color);
     align-items: center; 
     justify-content: center;
     overflow: hidden; 
@@ -418,13 +417,13 @@ html.transition *:after {
     background: crimson; 
 }
 .vectoriales-up {
-    height: 20vh;
+    height: 50%;
     width: 70%; 
+    padding: 1rem; 
     display: flex;
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    flex-wrap: wrap;
     color: var(--text-color); 
 }
 
@@ -436,15 +435,16 @@ html.transition *:after {
     font-family: 'Raleway', sans-serif;
 }
 .vectoriales-down {
-    height: 80vh;
-    width: 90%;
-    background-image: url("../images/diseños vectoriales/h800-915223XF4dIpqD.png");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: contain; 
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vectoriales-down img{
+    width: 80%; 
 }
 
-.vectoriales-showdown {
+.vectoriales-showdown, .vectoriales-showdown-detail {
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -470,9 +470,8 @@ html.transition *:after {
     justify-content: center; 
     overflow: hidden; 
     background-color: var(--main-color); 
-    border: 1px solid var(--text-color);
 }
-.vectoriales-showdown img {
+.vectoriales-showdown img, .vectoriales-showdown-detail img {
     max-width: 80%;
     max-height: 80%; 
     margin: auto; 
@@ -578,6 +577,113 @@ html.transition *:after {
     max-width: 60%; 
     border: 1px solid black; 
 }
+
+a.lightbox img {
+    height: 10rem; 
+    border: 1px solid black; 
+    margin: 1rem; 
+}
+
+.lightbox-target {
+    position: fixed; 
+    top: -100%;
+    width: 100%; 
+    width: 100%; 
+    opacity: 0; 
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
+}
+
+.lightbox-target img {
+    margin: auto; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    max-height: 0%; 
+    max-width: 0%; 
+    border: 1px solid black; 
+    box-sizing: border-box;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+    display: block;
+    width:50px;
+    height:50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    }
+    
+    /* Provides part of the "X" to eliminate an image from the close link */
+    
+    a.lightbox-close:before {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top:10px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+    }
+    
+    /* Provides part of the "X" to eliminate an image from the close link */
+    
+    a.lightbox-close:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top:10px;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    }
+    
+    /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+    
+    .lightbox-target:target {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    }
+    
+    .lightbox-target:target img {
+    max-height: 100%;
+    max-width: 100%;
+    }
+    
+    .lightbox-target:target a.lightbox-close {
+    top: 0;
+    }
+    
 
 .button-carteles {
     height: 2rem; 
@@ -700,16 +806,17 @@ html.transition *:after {
 .contact-form-container-content {
     height: 14rem;
     width: 20rem; 
-    max-width: 90%;
-    max-height: 90%;
+    margin: 1rem; 
+    max-width: 100%;
+    max-height: 100%;
     display: flex; 
     flex-direction: column;
     align-content: center; 
-    justify-content: space;
+    justify-content: center;
 }
 
 input[type="text"], input[type="email"], textarea {
-    width: 100%; 
+    width: 95%; 
     border: none; 
     border-bottom: 1px solid var(--main-color);
     padding: 0.5rem; 
@@ -759,6 +866,9 @@ input[type=submit]:hover{
 
 
 @media (min-width: 1109px) and (max-width: 1402px) {
+
+    
+
     .vectoriales-showdown{
         height: 80vh; 
     }
@@ -778,9 +888,68 @@ input[type=submit]:hover{
     }
 }
 
+@media (min-width: 600px) and (max-width: 1200px) {
+    .portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
+        height: 50vh; 
+    }
+}
 
+@media (min-width: 300px) and (max-width: 599px) {
+    .portada, .ilustraciones-preview, .ilustraciones, .vectoriales, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
+        height: 25vh; 
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+    .contacto-left, .contacto-right {
+        width: 100%; 
+    }
+    .contacto-left {
+        height: 10vh;
+    }
+    .contacto-right {
+        align-items: center; 
+        justify-content: center;
+        margin: auto; 
+    }
+
+    .ilustraciones {
+        height: 55vh; 
+        flex-direction: column;
+    }
+
+    .preview-left-detail, .preview-right-detail {
+        width: 80%; 
+    }
+    .preview-left-detail {
+        height: 10vh; 
+    }
+    .preview-right-detail img {
+        width: 100%; 
+    }
+
+
+    .vectoriales-showdown-detail {
+        height: 75vh; 
+    }
+
+    .vectoriales-showdown-container-up {
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+    }
+    .vectoriales-showdown-left, .vectoriales-showdown-right {
+        width: 80%; 
+    }
+
+}
+/*.vectoriales-showdown, .vectoriales-showdown-detail,
+revamp: both designs need to be one under the other in responsive*/
 
 @media (min-width: 905px) and (max-width: 1108px) {
+
+
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -798,6 +967,9 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 761px) and (max-width: 904px) {
+
+    
+
     .flyers-carteles-up {
         height: 80%; 
         flex-wrap: wrap;
@@ -884,42 +1056,12 @@ input[type=submit]:hover{
     }
 }
 
-@media (max-width: 639px) and (min-width: 485px) {
-
-    .contact-form-container-content {
-        width: 15rem; 
-    }
 
 
-}
-
-@media (max-width: 484px) and (min-width: 388px) {
-
-    .contact-form-container-content {
-        width: 12rem; 
-    }
-
-    input[type="text"], input[type="email"], textarea, input[type=submit] {
-        font-size: .8rem; 
-    }
-    .marta {
-        font-size: 5.7rem; 
-    }
-
-}
 
 
-@media (max-width: 387px) and (min-width: 250px) {
 
-    .contact-form-container-content {
-        width: 10rem; 
-    }
 
-    input[type="text"], input[type="email"], textarea, input[type=submit] {
-        font-size: .6rem; 
-    }
-
-}
 
 
 
