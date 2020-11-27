@@ -415,7 +415,7 @@ html.transition *:after {
     max-width: 100%; 
 }
 
-.vectoriales {
+.vectoriales, .flyers-carteles-detail {
     color: var(--text-color); 
     flex-direction: column; 
     align-items: center; 
@@ -567,12 +567,28 @@ html.transition *:after {
     height: 100%;
     display: flex; 
     padding: .9rem; 
-    background-color: var(--main-color); 
+    background-image: url("../images/flyers/h800-915223DWali2le.png");
+    background-position: center; 
+    background-size: cover; 
+    background-repeat: no-repeat;
     border-top: 1px solid var(--main-color);
     color: var(--main-color); 
     align-items: center; 
     justify-content: center;
     overflow: hidden; 
+}
+
+.flyers-carteles-detail {
+    height: 30vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.flyers-carteles-detail-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 1rem 0; 
 }
 
 .flyer-img-uno {
@@ -911,7 +927,7 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    .ilustraciones-preview, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .motion-graphics {
+    .ilustraciones-preview, .vectoriales, .vectoriales-showdown, .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .flyers-carteles-detail, .motion-graphics {
         height: 60vh; 
     }
 
@@ -929,7 +945,7 @@ input[type=submit]:hover{
 }
 
 @media (max-width: 1200px) and (min-width: 760px) {
-    .ilustraciones, .flyers-carteles-dos {
+    .ilustraciones {
         height: 75vh; 
     }
     .preview-right-detail img {
@@ -940,13 +956,11 @@ input[type=submit]:hover{
 }
 
 @media (min-width: 200px) and (max-width: 599px) {
-    .ilustraciones-preview, .vectoriales-showdown,  .ilustraciones-showdown.flyers-carteles, .flyers-carteles-dos, .motion-graphics {
+    .ilustraciones-preview, .vectoriales-showdown,  .ilustraciones-showdown, .flyers-carteles-dos, .motion-graphics {
         height: 25vh; 
     }
-    .vectoriales {
+    .vectoriales, .flyers-carteles-detail {
         height: 25vh;
-        margin-bottom: 2rem;
-        
     }
 
     .marta {
@@ -1015,7 +1029,7 @@ input[type=submit]:hover{
     }
 
     .section-name-tight {
-        font-size: 1.5rem; 
+        font-size: 1.7rem; 
     }
     .section-name-description {
         margin: 1rem 0; 
@@ -1024,92 +1038,8 @@ input[type=submit]:hover{
 
 
 }
-/*.vectoriales-showdown, .vectoriales-showdown-detail,
-revamp: both designs need to be one under the other in responsive*/
-
-@media (min-width: 905px) and (max-width: 1108px) {
 
 
-
-}
-
-@media (min-width: 761px) and (max-width: 904px) {
-
-    
-
-    .flyers-carteles-up {
-        height: 80%; 
-        flex-wrap: wrap;
-    }
-    .flyers-carteles-up img {
-        margin: 0 .1rem; 
-        max-height: 55%;
-    }
-    .flyers-carteles-down {
-        height: 20%; 
-    }
-    .flyers-carteles-down-text h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 760px) {
-    .flyers-carteles-up {
-        height: 80%; 
-        flex-wrap: wrap;
-    }
-    .flyers-carteles-up img {
-        margin: 0 .2rem; 
-        max-height: 45%;
-    }
-    .flyers-carteles-down {
-        height: 20%; 
-    }
-    .flyers-carteles-down-text {
-        padding: 5rem; 
-    }
-    .flyers-carteles-down-text h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 300px) and (max-width: 425px) {
-    .flyers-carteles-up {
-        height: 80%; 
-        flex-wrap: wrap;
-    }
-    .flyers-carteles-up img {
-        margin: 0 .1rem; 
-        max-height: 35%;
-    }
-    .flyers-carteles-down {
-        height: 20%; 
-    }
-    .flyers-carteles-down-text {
-        padding: 3rem; 
-    }
-    .flyers-carteles-down-text h1 {
-        font-size: 2rem;
-    }
-}
-
-
-@media (min-width: 1214px) and (max-width: 965px) {
-    .flyers-carteles-up img {
-        margin: 0 .2rem; 
-        max-height: 50%;
-
-    }
-}
-
-
-@media (max-width: 974px) and (min-width: 579px) {
-
-}
-
-@media (max-width: 578px) and (min-width: 300px) {
-
-}
 
 
 
